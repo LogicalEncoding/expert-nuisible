@@ -29,6 +29,10 @@ function start() {
     $("#btn_prestationsBack").on("click", function (pEvent) {
         $("#menu_prestations").addClass("hidden");
     });
+    
+    $("#btn_submit").on("click", function (pEvent) {
+        $("#form").submit();
+    });
 }
 
 function resize() {

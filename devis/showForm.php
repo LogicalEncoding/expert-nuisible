@@ -11,11 +11,11 @@
 
         // Type de prestation
         $pre_prestation = "Prestation(s) désirée(s) par le client :";
-        if($deratisation) $pre_prestation       .= '<br />- Dératisation';
-        if($punaises) $pre_prestation           .= '<br />- Traitement de punaises';
-        if($cafards) $pre_prestation            .= '<br />- Traitement de cafards';
-        if($desinsectisation) $pre_prestation   .= '<br />- Désinsectisation';
-        if($autre) $pre_prestation              .= '<br />- Autre';
+        if($deratisation != "") $pre_prestation       .= '<br />- Dératisation';
+        if($punaises != "") $pre_prestation           .= '<br />- Traitement de punaises';
+        if($cafards != "") $pre_prestation            .= '<br />- Traitement de cafards';
+        if($desinsectisation != "") $pre_prestation   .= '<br />- Désinsectisation';
+        if($autre != "") $pre_prestation              .= '<br />- Autre';
 
         // Adresse
         $pre_adresse = "Adresse : " . $adresse;
@@ -65,32 +65,71 @@
         
         $form = '
         <form is="iron-form" id="form" method="post" action="index.php">
-            <paper-input label="Nom" value="' . $nom . '" name="nom" auto-validate pattern="[a-zA-Z- ]*" error-message="caractère non valide"></paper-input>
-            <paper-input label="Prénom" value="' . $prenom . '" name="prenom" auto-validate pattern="[a-zA-Z- ]*" error-message="caractère non valide"></paper-input>
-            <paper-input label="Adresse" value="' . $adresse . '" name="adresse" auto-validate pattern="[0-9a-zA-Z- ]*" error-message="caractère non valide"></paper-input>
-            <paper-input label="Téléphone" value="' . $phone . '" name="phone" char-counter auto-validate pattern="[0-9]{10}" error-message="caractère manquant ou non valide" minlength="10" maxlength="10"></paper-input>
-            <paper-input label="Email" value="' . $email . '" name="email" auto-validate pattern="^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$" error-message="adresse non valide"></paper-input>
-            
-            <label for="deratisation">Nature de l\'interventtion : </label><br />
-            <paper-checkbox name="deratisation"> dératisation</paper-checkbox>
+            <paper-input-container auto-validate>
+                <label>Nom</label>
+                <input is="iron-input" name="nom" value="' . $nom . '" pattern="[a-zA-Z- ]*">
+                <paper-input-error>caractère non valide</paper-input-error>
+            </paper-input-container>
+            <paper-input-container auto-validate>
+                <label>Prénom</label>
+                <input is="iron-input" name="prenom" value="' . $prenom . '" pattern="[a-zA-Z- ]*">
+                <paper-input-error>caractère non valide</paper-input-error>
+            </paper-input-container>
+            <paper-input-container auto-validate>
+                <label>Adresse</label>
+                <input is="iron-input" name="adresse" value="' . $adresse . '" pattern="[0-9a-zA-Z- ]*">
+                <paper-input-error>caractère non valide</paper-input-error>
+            </paper-input-container>
+            <paper-input-container auto-validate>
+                <label>Téléphone</label>
+                <input is="iron-input" name="phone" value="' . $phone . '" pattern="[0-9]{10}" maxlength="10">
+                <paper-input-error>caractère manquant ou non valide</paper-input-error>
+                <paper-input-char-counter></paper-input-char-counter>
+            </paper-input-container>
+            <paper-input-container auto-validate>
+                <label>E-mail</label>
+                <input is="iron-input" name="mail" value="' . $email . '" pattern="^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$">
+                <paper-input-error>e-mail non valide</paper-input-error>
+            </paper-input-container>
+            <label>Nature de l\'interventtion :</label><br />
+            <input type="checkbox" name="deratisation" id="deratisation" ' . $deratisation . '/><label for="deratisation">Dératisation</label><br />
+            <input type="checkbox" name="punaises" id="punaises" ' . $punaises . '/><label for="punaises">Traitement punaises de lit</label><br />
+            <input type="checkbox" name="cafards" id="cafards" ' . $cafards . '/><label for="cafards">Traitement cafards</label><br />
+            <input type="checkbox" name="desinsectisation" id="desinsectisation" ' . $desinsectisation . '/><label for="desinsectisation">Désinsectisation</label><br />
+            <input type="checkbox" name="autre" id="autre" ' . $autre . '/><label for="autre">Autre</label><br />
+            <paper-input-container auto-validate>
+                <label>Surface à traiter</label>
+                <input is="iron-input" name="surface" value="' . $surface . '" pattern="[0-9]{1,5}[a-zA-Z² ]*">
+                <paper-input-error>caractère non valide</paper-input-error>
+            </paper-input-container>
+            <paper-input-container>
+                <label>Remarque</label>
+                <input is="iron-input" name="remarque" value="' . $remarque . '" pattern="[0-9]{1,5}[a-zA-Z² ]*">
+                <paper-input-error>caractère non valide</paper-input-error>
+            </paper-input-container>
+            <paper-button id="btn_submit">Envoyer</paper-button>
         </form>';
-
         echo $form;
     }
 ?>
 
+
+
 <!--
-<input type="checkbox" name="deratisation" id="deratisation" /><label for="deratisation">Dératisation</label><br />
-<input type="checkbox" name="punaises" id="punaises" /><label for="punaises">Traitement punaises de lit</label><br />
-<input type="checkbox" name="cafards" id="cafards" /><label for="cafards">Traitement cafards</label><br />
-<input type="checkbox" name="desinsectisation" id="desinsectisation" /><label for="desinsectisation">Désinsectisation</label><br />
-<input type="checkbox" name="autre" id="autre" /><label for="autre">Autre</label>
+<paper-textarea name="remarque" label="Remarque" value="' . $remarque . '"></paper-textarea>
+
+<input type="checkbox" name="deratisation" id="deratisation" ' . $deratisation . '/><label for="deratisation">Dératisation</label><br />
+<input type="checkbox" name="punaises" id="punaises" ' . $punaises . '/><label for="punaises">Traitement punaises de lit</label><br />
+<input type="checkbox" name="cafards" id="cafards" ' . $cafards . '/><label for="cafards">Traitement cafards</label><br />
+<input type="checkbox" name="desinsectisation" id="desinsectisation" ' . $desinsectisation . '/><label for="desinsectisation">Désinsectisation</label><br />
+<input type="checkbox" name="autre" id="autre" ' . $autre . '/><label for="autre">Autre</label><br />
+<paper-button id="btn_submit">Envoyer</paper-button>
 
 <TD>Surface à traiter</TD>
-<TD><INPUT type="text" size="40" name="surface" value="' . $surface . '" /></TD>
+<TD><INPUT type="text" size="40"  value="' . $surface . '" /></TD>
 
 <TD>Remarque</TD>
 <TD><TEXTAREA rows="4" cols="50" name="remarque" value="' . $remarque . '"></TEXTAREA></TD>
 
-<TD COLSPAN=2><INPUT type="submit" value="Envoyer" /></TD>
+<paper-checkbox name="deratisation" id="deratisation" ' . $deratisation_checked . '>dératisation</paper-checkbox>
 -->
