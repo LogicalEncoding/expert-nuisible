@@ -1,0 +1,100 @@
+# BEGIN Expire
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 day"
+    ExpiresByType text/html "access plus 1 day"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType image/jpg "access plus 1 week"
+    ExpiresByType image/jpeg "access plus 1 week"
+    ExpiresByType image/png "access plus 1 week"
+    ExpiresByType image/gif "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType application/x-javascript "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+# END Expire
+
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^expert-nuisible.fr$
+RewriteRule ^(.*) http://www.expert-nuisible.fr/$1  [QSA,L,R=301]
+
+
+#
+#Deratisation
+#
+RewriteRule ^deratisation-expert-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/deratisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^deratisation-efficace-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/deratisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^deratisation-hotel-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/deratisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^deratiseur-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/deratisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^deratisation-societe-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/deratisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^deratisation-entreprise-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  	/deratisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^deratisation-contrat-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/deratisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^deratisation-restaurant-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  	/deratisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^deratisation-tarif-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/deratisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^deratisation-prix-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/deratisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^deratisation-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/deratisation/custom.php?postal=$1&ville=$2 [L]
+
+
+#
+#Pigeon
+#
+RewriteRule ^pigeon-anti-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/depigeonnage/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^pigeon-eloigner-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  	/depigeonnage/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^pigeon-pic-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/depigeonnage/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^pigeon-chasser-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  	/depigeonnage/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^depigeonnage-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/depigeonnage/custom.php?postal=$1&ville=$2 [L]
+
+
+#
+#Cafards
+#
+RewriteRule ^cafards-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/cafards/custom.php?postal=$1&ville=$2 [L]
+
+
+#
+#Desinsectisation
+#
+RewriteRule ^desinsectisation-mites-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/desinsectisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^desinsectisation-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/desinsectisation/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^desinsectisation-puces-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^desinsectisation-punaisesdelit-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  	/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^desinsectisation-cafards-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/cafards/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^desinsectisation-blattes-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/cafards/custom.php?postal=$1&ville=$2 [L]
+
+
+#
+#Punaises de lit
+#
+RewriteRule ^pucesdelit-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  				/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-debarrasser-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-piqure-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-cause-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-matelas-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-larve-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-hygiene-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-hotel-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-desinfection-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-solution-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-qui-paye-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-quoi-faire-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-photo-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-origine-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-oeuf-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-insecticide-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-image-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-traitement-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-repulsif-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-eliminer-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-elimination-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-exterminer-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-extermination-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  		/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-astuce-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  			/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+RewriteRule ^punaisesdelit-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  				/punaisesdelit/custom.php?postal=$1&ville=$2 [L]
+
+
+#
+#Debarras
+#
+RewriteRule ^debarras-([0-9]{2,5})-([a-z0-9-]{3,})\.php$  	/debarras/custom.php?postal=$1&ville=$2 [L]

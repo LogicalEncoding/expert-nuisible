@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+@font-face {
+    font-family : "Open Sans Bold", sans-serif;
+    font-style  : normal;
+    font-weight : 800;
+    src         : local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url("http://fonts.gstatic.com/s/opensans/v10/EInbV5DfGHOiMmvb1Xr-hugdm0LZdjqr5-oayXSOefg.woff2") format("woff2"), url("http://fonts.gstatic.com/s/opensans/v10/EInbV5DfGHOiMmvb1Xr-hnhCUOGz7vYGh680lGh-uXM.woff") format("woff");
+}
+
+@font-face {
+    font-family : "Open Sans Semibold", sans-serif;
+    font-style  : normal;
+    font-weight : 600;
+    src         : local("Open Sans Semibold"), local("OpenSans-Semibold"), url("http://fonts.gstatic.com/s/opensans/v10/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2") format("woff2"), url("http://fonts.gstatic.com/s/opensans/v10/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff") format("woff");
+}
+
+@font-face {
+    font-family : "Open Sans", sans-serif;
+    font-style  : normal;
+    font-weight : 400;
+    src         : local("Open Sans"), local("OpenSans"), url("http://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2") format("woff2"), url("http://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff") format("woff");
+}
+
+/* ALL ELEMENTS */
+
+body {
+    margin          : 0px; 
+    font-size       : 1.5rem;                   /* Taille police global */
+    line-height     : 1.6;                      /* Espacement texte global */
+    font-family     : "Open sans", sans-serif;  /* Police texte global */
+    color           : #7A7A7A;                  /* Couleur texte global */
+    background-color: #ff8900;                  /* Couleur background global */
+    overflow-x      : hidden;
+}
+
+.container_sheet {
+    position        : relative;
+    margin-left     : auto;
+    margin-right    : auto;
+    padding         : 10px;     /* Espacement interne globale container */
+    max-width       : 1200px;   /* Taille globale container */
+    min-width       : 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    color           : #f60018; /* Couleur globale lien */
+    text-decoration : none;
+}
+
+h1 {
+    font-weight     : 900;
+    margin          : 0px 0px 20px;
+    line-height     : 1;
+    text-transform  : uppercase;
+    font-size       : 38px;
+    color           : #444; /* Couleur globale h1 */
+    letter-spacing  : -2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear       : both;
+    margin      : 0px 0px 10px;
+    font-family : "Open Sans Bold", sans-serif;
+}
+
+/* HEADER ELEMENTS */
+
+header {
+    position            : fixed;
+    width               : 100%;
+    min-width           : 954px;
+    background-color    : green; /* Couleur header */
+    display             : block;
+    z-index             : 10;
+}
+
+header nav {
+    position    : relative;
+    max-width   : 1200px; /* Largeur max header */
+    margin      : 0 auto;
+}
+
+#main_nav_logo {
+    float       : left;
+    padding-top : 10px;
+}
+
+#main_nav_logo paper-material {
+    padding : 0px;
+}
+
+#main_nav_phone {
+    float       : right;
+    padding-top : 10px;
+}
+
+#main_nav_phone paper-material {
+    padding : 0px;
+}
+
+#main_nav_menu {
+    float       : right;
+    border-left : 2px solid white;
+    margin-left : 10px;
+    padding     : 0px;
+}
+
+#icon {
+    color   : white;
+    padding : 10px;
+}
+
+.menu {
+    position            : fixed;
+    top                 : 0px;
+    right               : 0px;
+    height              : 100%;
+    background-color    : black;
+}
+
+.menu ul {
+    list-style-type : none;
+    float           : left;
+    padding         : 0px;
+    margin          : 0px;
+}
+
+.menu paper-button {
+    font-size           : 2.0rem;
+    background-color    : #3f3f3f;
+    color               : white;
+    width               : 460px;
+    margin              : 1px 0px;
+}
+
+.menu paper-material {
+    margin-left : 1.0em;
+    padding     : 0em;
+    text-align  : left;
+}
+
+.first_line {
+    margin-bottom : 24px;
+}
+
+#menu_main {
+    z-index : 20;
+}
+
+#menu_conseils, #menu_prestations {
+    z-index : 30;
+}
+
+/* MAIN ELEMENTS */
+
+.main_content_title {
+    background : none repeat scroll 0% 0% #FFF;    /* Couleur background Main content title */
+}
+
+.main_content_article {
+    background  : none repeat scroll 0% 0% #fff5d5;    /* Couleur background Main content article */
+    overflow-x  : auto; 
+    min-height  : 700px; 
+    font-size   : 1rem;
+}
+
+#main_content h1, h3, h5, p {
+    padding : 10px;
+}
+
+#main_content_nav {
+    background : none repeat scroll 0% 0% #ffffff;
+}
+
+.title {
+    font-size : 2.5rem;
+    max-width : 1250px;
+}
+
+.image_article {
+    float : left;
+}
+
+.main_content_article p {
+    float           : left;
+    font-size       : 1rem;
+    margin-top      : 0px;
+    margin-bottom   : 0px;
+}
+
+.main_content_article .accroche {
+    max-width   : 700px; 
+    margin-top  : 20px;
+}
+
+.keywords {
+    float           : left;
+    margin-top      : 30px;
+    font-size       : 1rem;
+    font-weight     : bold;
+    text-transform  : uppercase;
+}
+
+.keywords li {
+    display         : inline;
+    padding-right   : 50px;
+}
+
+#main_content_nav .img_tampon {
+    position: absolute;
+    width   : 90px;
+    height  : 83px;
+    border  : 0px;
+    top     : 0px;
+    left    : 0px;
+}
+
+#main_content_nav paper-button {
+    background-color : #fff5d5;
+}
+
+#main_content_nav paper-button paper-material {
+    padding : 0px;
+}
+
+.queleque {
+    display : inline-block;
+    margin-bottom : 1em;
+}
+
+.queleque p {
+    margin-bottom: 0px;
+}
+
+/* FOOTER ELEMENTS */
+
+#footer_article {
+    background : none repeat scroll 0% 0% #242424;
+}
+
+.footer_column {
+    width           : 100%;
+    padding         : 0px;
+    margin          : 0px;
+    margin-bottom   : 5px;
+}
+
+.footer_column a {
+    padding     : 0px;
+    margin      : 0px;
+    font-size   : 0.7em;
+    line-height : 1.2;
+    color       : #595;
+}
+
+#footer_legals {
+    background  : none repeat scroll 0% 0% #242424;
+    border      : 2px solid #f60018;
+    text-align  : center;
+}
