@@ -24,13 +24,12 @@
 /* ALL ELEMENTS */
 
 body {
-    margin          : 0px; 
-    font-size       : 1.5rem;                   /* Taille police global */
-    line-height     : 1.6;                      /* Espacement texte global */
-    font-family     : "Open sans", sans-serif;  /* Police texte global */
-    color           : #7A7A7A;                  /* Couleur texte global */
+    margin          : 0px;
     background-color: #ff8900;                  /* Couleur background global */
     overflow-x      : hidden;
+    line-height     : 1.6;                      /* Espacement texte global */
+    font-family     : "Open sans", sans-serif;  /* Police texte global */
+    color           : #7a7a7a;                  /* Couleur texte global */
 }
 
 .container_sheet {
@@ -43,7 +42,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display : none;
 }
 
 a {
@@ -52,16 +51,16 @@ a {
 }
 
 h1 {
-    font-weight     : 900;
     margin          : 0px 0px 20px;
+    font-weight     : 900;
     line-height     : 1;
     text-transform  : uppercase;
     font-size       : 38px;
-    color           : #444; /* Couleur globale h1 */
+    color           : #444444; /* Couleur globale h1 */
     letter-spacing  : -2px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
     clear       : both;
     margin      : 0px 0px 10px;
     font-family : "Open Sans Bold", sans-serif;
@@ -71,9 +70,11 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
     position            : fixed;
+    top                 : 0px;
+    left                : 0px;
     width               : 100%;
     min-width           : 954px;
-    background-color    : green; /* Couleur header */
+    background-color    : #007C00; /* Couleur header */
     display             : block;
     z-index             : 10;
 }
@@ -104,7 +105,7 @@ header nav {
 
 #main_nav_menu {
     float       : right;
-    border-left : 2px solid white;
+    border-left : 2px solid #ffffff;
     margin-left : 10px;
     padding     : 0px;
 }
@@ -119,7 +120,7 @@ header nav {
     top                 : 0px;
     right               : 0px;
     height              : 100%;
-    background-color    : black;
+    background-color    : #000000;
 }
 
 .menu ul {
@@ -130,11 +131,11 @@ header nav {
 }
 
 .menu paper-button {
-    font-size           : 2.0rem;
     background-color    : #3f3f3f;
-    color               : white;
     width               : 460px;
     margin              : 1px 0px;
+    font-size           : 2.0rem; /* Taille police bouton menu */
+    color               : #ffffff;
 }
 
 .menu paper-material {
@@ -157,8 +158,12 @@ header nav {
 
 /* MAIN ELEMENTS */
 
+#main_content {
+    margin-top: 100px;
+}
+
 .main_content_title {
-    background : none repeat scroll 0% 0% #FFF;    /* Couleur background Main content title */
+    background : none repeat scroll 0% 0% #ffffff;    /* Couleur background Main content title */
 }
 
 .main_content_article {
@@ -177,8 +182,8 @@ header nav {
 }
 
 .title {
-    font-size : 2.5rem;
     max-width : 1250px;
+    font-size : 2.5rem;
 }
 
 .image_article {
@@ -187,9 +192,9 @@ header nav {
 
 .main_content_article p {
     float           : left;
-    font-size       : 1rem;
     margin-top      : 0px;
     margin-bottom   : 0px;
+    font-size       : 1rem;
 }
 
 .main_content_article .accroche {
@@ -228,12 +233,23 @@ header nav {
 }
 
 .queleque {
-    display : inline-block;
-    margin-bottom : 1em;
+    display         : inline-block;
+    margin-bottom   : 1em;
 }
 
 .queleque p {
     margin-bottom: 0px;
+}
+
+/* FORM */
+
+form {
+
+}
+
+form paper-button {
+    margin-top          : 2em;
+    background-color    : #eeeeee;
 }
 
 /* FOOTER ELEMENTS */
