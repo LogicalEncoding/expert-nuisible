@@ -108,12 +108,10 @@
                 <input is="iron-input" name="surface" value="' . $surface . '" pattern="[0-9]{1,5}[a-zA-Z² ]*">
                 <paper-input-error>caractère non valide</paper-input-error>
             </paper-input-container>
+            
+            <paper-textarea name="remarque" label="Remarque" value="' . $remarque . '"></paper-textarea>
 
-            <paper-input-container>
-                <label>Remarque</label>
-                <input is="iron-input" name="remarque" value="' . $remarque . '" pattern="[0-9]{1,5}[a-zA-Z² ]*">
-                <paper-input-error>caractère non valide</paper-input-error>
-            </paper-input-container>
+            
             
             <paper-button id="btn_submit">Envoyer</paper-button>
         </form>';
