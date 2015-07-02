@@ -169,7 +169,6 @@ header nav {
 .main_content_article {
     background  : none repeat scroll 0% 0% #fff5d5;    /* Couleur background Main content article */
     overflow-x  : auto; 
-    min-height  : 700px; 
     font-size   : 1rem;
 }
 
@@ -240,6 +239,60 @@ header nav {
 .queleque p {
     margin-bottom: 0px;
 }
+
+
+/*  CONTACT US */
+
+#contact_us_container paper-button paper-material {
+    padding : 0px;
+}
+
+#contact_us_container {
+    width: 100%;
+    background-color    : #FCFAFA;
+}
+
+#contact_us_img {
+    margin-top : 100px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 313px;
+}
+
+#contact_us h5 {
+    font-size: 3em;
+    margin-top: -7px;
+    text-align: center;
+}
+
+#contact_us {
+    width               : 100%;
+    min-width           : 954px;
+    background-color    : #007C00; /* Couleur header */
+}
+
+
+#contact_us_phone {
+    
+}
+
+/* PRESTATION */
+
+.main_content_prestation a paper-button {
+    text-align: left;
+    text-transform: none;
+    color           : #7a7a7a;
+    background-color: #EFDCDC;
+    margin-top      :1em;
+}
+
+.main_content_prestation_conseil {
+    position: absolute;
+    top: 290px;
+    left: 850px;
+}
+
 
 /* FORM */
 

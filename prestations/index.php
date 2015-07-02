@@ -21,11 +21,11 @@
         <div id="main_content">
             <div class="container_sheet main_content_title">
                 <h1>Nos interventions sont rapides, efficaces et discrêtes</h1>
-                <h2>Nous intervenons dans les domaines de la dératisation, désinsectisation, dépigeonisation, désinfection, du débarras, ...</h2>
+                <h2>Nous intervenons dans les domaines de la dératisation, désinsectisation, dépigeonisation, désinfection, du débarras, sur les cafards et les punaises de lit.</h2>
                 <h5>A votre écoute au quotidien, nous intervenons rapidement et avec efficacité dans les domaines de la dératisation, désinsectisation, dépigeonisation et désinfection. Hss Expert nuisible est à VOTRE écoute.</h5>
             </div>
             
-            <?php include('../content/mainNav.php'); ?>
+            <?php include('../content/mainPrestation.php'); ?>
         </div>
 
         <?php include('../content/footer.php'); ?>

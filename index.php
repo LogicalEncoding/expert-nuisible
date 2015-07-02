@@ -16,7 +16,9 @@
         <?php include('content/scripts.php'); ?>
     </head>
     <body>
+        <?php include('content/contactUs.php'); ?>
         <?php include('content/header.php'); ?>
+        
 
         <div id="main_content">
             <div class="container_sheet main_content_title">
